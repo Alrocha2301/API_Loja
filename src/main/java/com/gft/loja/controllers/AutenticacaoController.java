@@ -19,6 +19,10 @@ public class AutenticacaoController {
     @Autowired
     private AutenticacaoService autenticacaoService;
 
+    /*public AutenticacaoController(AutenticacaoService autenticacaoService) {
+        this.autenticacaoService = autenticacaoService;
+    }*/
+
     @PostMapping
     public ResponseEntity<TokenDTO> autenticar(@RequestBody AutenticacaoDTO dto) {
 

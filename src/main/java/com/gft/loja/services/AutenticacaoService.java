@@ -21,11 +21,11 @@ public class AutenticacaoService {
     /*@Autowired
     private AuthenticationManager authManager;*/
 
-    @Value("${jwt.loja.expiration}")
+    @Value("${loja.jwt.expiration}")
     private String expiration;
-    @Value("${jwt.loja.secret}")
+    @Value("${loja.jwt.secret}")
     private String secret;
-    @Value("${jwt.loja.issuer}")
+    @Value("${loja.jwt.issuer}")
     private String issuer;
 
 
@@ -45,6 +45,7 @@ public class AutenticacaoService {
 
     private String gerarToken(Authentication authenticate) {
 //        Usuario principal = (Usuario)authenticate.getPrincipal();
+
         Usuario principal = new Usuario();
         principal.setId(1L);
         Date hoje = new Date();
